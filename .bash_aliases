@@ -1,0 +1,5 @@
+alias g="cd ~/git"
+alias sn="shutdown now"
+alias rider="rider.sh"
+alias pycharm="pycharm.sh"
+alias p="python3"
