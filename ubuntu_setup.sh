@@ -97,6 +97,9 @@ cd ~/Downloads
 wget https://global.download.synology.com/download/Tools/SynologyDriveClient/1.1.3-10570/Ubuntu/Installer/x86_64/synology-drive-10570.x86_64.deb
 sudo dpkg -i synology-drive-10570.x86_64.deb
 
+# htop
+sudo apt-get install -y htop
+
 # bash and vim setup
 cd ~/git
 git clone https://github.com/patbassing/vim.git
