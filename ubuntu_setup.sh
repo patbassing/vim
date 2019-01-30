@@ -26,16 +26,16 @@ sudo apt-get install -y gnome-tweak-tool gnome-shell-extensions chrome-gnome-she
 sudo apt-get install -y python python3 python-pip python3-pip
 
 # VLC
-sudo apt-get install -y vlc
+sudo snap install vlc --classic
+
+# Postman
+sudo snap install postman --classic
 
 # .Net Core
-cd ~/Downloads
-wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
-sudo dpkg -i packages-microsoft-prod.deb
-sudo add-apt-repository universe
-sudo apt-get install -y apt-transport-https
-sudo apt-get update
-sudo apt-get install -y dotnet-sdk-2.2
+sudo snap install dotnet-sdk --classic
+
+# JDK
+sudo apt-get install -y default-jdk
 
 # VS Code
 sudo snap install vscode --classic
@@ -62,13 +62,23 @@ sudo snap install pycharm-community --classic
 sudo snap install rider --classic
 
 # LibreOffice
-sudo apt-get install -y libreoffice
+sudo snap install libreoffice --classic
 
 # FileZilla
 sudo apt-get install -y filezilla
 
+# Skype
+sudo snap install skype --classic
+
+# Spotify
+sudo snap install spotify --classic
+
+# Handbrake
+sudo snap install handbrake-jz --classic
+
 # Games
-sudo apt-get install -y warzone2100
+sudo snap install warzone2100 --classic
+sudo snap install solitaire --classic
 
 # Synology Drive (link may change)
 cd ~/Downloads
