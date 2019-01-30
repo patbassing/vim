@@ -1,2 +1,2 @@
 # vim
-Personal vim preference
+Personal vim, bash and ubuntu preferences
