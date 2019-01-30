@@ -1,3 +1,14 @@
+if [ -z "$1" ]
+   then
+      echo "Missing arguments. Command must be in the form:"
+      echo "script.sh [MySQL_Root_Password]"
+      echo "ex: ubuntu_setup.sh guest"
+      exit
+fi
+
+# Variables
+mysql_root_password="$1"
+
 # Create folder structure
 mkdir ~/git
 mkdir ~/.ssh
@@ -54,6 +65,7 @@ sudo apt-get install -y docker-ce
 # MySQL - https://help.ubuntu.com/lts/serverguide/mysql.html.en
 sudo apt-get install -y mysql-server mysql-client mysql-workbench
 sudo systemctl restart mysql.service
+sudo mysql -u root -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '$mysql_root_password';"
 
 # Pycharm
 sudo snap install pycharm-community --classic
@@ -91,3 +103,9 @@ git clone https://github.com/patbassing/vim.git
 cd ~/git/vim
 cp -a .vim .vimrc .bashrc .bash_aliases ~
 source ~/.bashrc
+
+# Finishing remarks
+echo ""
+echo ""
+echo "Installation done. The following things should be considered manually"
+echo " - sudo mysql_secure_installation"
